@@ -6,6 +6,8 @@ go:
 
 go_import_path: github.com/Colstuwjx/apollo-agent
 
+install: make get-deps
+
 script:
   - make build
   - make test
