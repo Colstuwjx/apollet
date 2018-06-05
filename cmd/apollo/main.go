@@ -1,9 +1,9 @@
 package main
 
 import (
-	"log"
+	log "github.com/golang/glog"
 )
 
 func main() {
-	log.Println("Hello, world!")
+	log.Info("Hello, world!")
 }
