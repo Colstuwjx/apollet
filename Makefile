@@ -2,8 +2,8 @@ GO           := GO15VENDOREXPERIMENT=1 go
 FIRST_GOPATH := $(firstword $(subst :, ,$(shell $(GO) env GOPATH)))
 pkgs          = $(shell $(GO) list ./... | grep -v /vendor/ )
 
-BUILD_ENTRY             ?= cmd/apollo/main.go
-BINARY                  ?= apollo
+BUILD_ENTRY             ?= main.go
+BINARY                  ?= apollet
 
 all: format build test
 

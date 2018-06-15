@@ -1,0 +1,5 @@
+package: github.com/Colstuwjx/apollet
+import:
+- package: github.com/spf13/cobra
+- package: github.com/spf13/pflag
+  version: ~ v1.0.0
