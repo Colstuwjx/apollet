@@ -2,23 +2,38 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 
 	"github.com/spf13/cobra"
+
+	"github.com/Colstuwjx/apollet/pkg/apollet"
+	"github.com/Colstuwjx/apollet/pkg/config"
 )
 
-var rootCmd = &cobra.Command{
-	Use:   "apollet",
-	Short: "Apollet is an agent for apollo config center",
-	Long:  `A reliable agent for apollo, refers: https://github.com/Colstuwjx/apollo-agent`,
-	Run: func(cmd *cobra.Command, args []string) {
-		log.Println("CMD: ", cmd)
-		log.Println("Args: ", args)
-	},
-}
+var (
+	cfgFile string
+
+	rootCmd = &cobra.Command{
+		Use:   "apollet",
+		Short: "apollet is an agent for apollo config center",
+		Long:  `A reliable, multiple language supported agent for apollo, refers: https://github.com/Colstuwjx/apollet`,
+		Run: func(cmd *cobra.Command, args []string) {
+			conf, err := config.NewConf(cfgFile)
+			if err != nil {
+				panic(err)
+			}
+
+			agent := apollet.NewAgent(conf)
+			agent.Start()
+		},
+	}
+)
 
 func init() {
+	rootCmd.Flags().StringVar(&cfgFile, "conf", "", "config file path (default is testdata/conf.toml)")
+	rootCmd.MarkFlagRequired("conf")
+
+	// add sub cmds
 	rootCmd.AddCommand(versionCmd)
 }
 
