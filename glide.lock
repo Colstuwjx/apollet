@@ -1,8 +1,10 @@
-hash: 7b1d794ac40a069fb9007ea150844cc10afb0999cd88cd7d0f80348b5aeb8110
-updated: 2018-06-15T22:40:41.788647+08:00
+hash: 1099a48304ec01e11528392e556bd8751758603684787ce90b1e3540760642de
+updated: 2018-06-17T13:47:52.893279+08:00
 imports:
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/philchia/agollo
+  version: cb85e9a00a16124f99a74bd33367ab7b40dc3656
 - name: github.com/spf13/cobra
   version: ef82de70bb3f60c65fb8eebacbb2d122ef517385
 - name: github.com/spf13/pflag
