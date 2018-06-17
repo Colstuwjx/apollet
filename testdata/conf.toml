@@ -2,3 +2,4 @@ user = "root"
 pid = "/var/run/apollet.pid"
 debug = true
 env = "dev"
+cluster = "default"

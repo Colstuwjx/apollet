@@ -1,6 +1,8 @@
 hash: 1099a48304ec01e11528392e556bd8751758603684787ce90b1e3540760642de
-updated: 2018-06-17T13:47:52.893279+08:00
+updated: 2018-06-17T22:33:54.423071+08:00
 imports:
+- name: github.com/BurntSushi/toml
+  version: a368813c5e648fee92e5f6c30e3944ff9d5e8895
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/philchia/agollo
