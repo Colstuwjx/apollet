@@ -15,11 +15,8 @@ func (this *Agent) ServeHTTP() {
 	}
 
 	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	r.GET("/ping", this.ping)
+	r.GET("/get_string", this.getString)
 
 	if this.config.Http == nil {
 		fmt.Println("Http host and port must be specified!")

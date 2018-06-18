@@ -1,0 +1,5 @@
+package apollet
+
+const (
+	notFoundDefaultValue = ""
+)

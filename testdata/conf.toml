@@ -7,3 +7,6 @@ cluster = "default"
 [http]
     host = "127.0.0.1"
     port = 10810
+
+[apollo]
+    server = "127.0.0.1:8080"

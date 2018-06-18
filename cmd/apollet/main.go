@@ -25,6 +25,11 @@ var (
 			}
 
 			agent := apollet.NewAgent(conf)
+			if agent == nil {
+				fmt.Println("Init agent failed!")
+				os.Exit(1)
+			}
+
 			agent.Start()
 		},
 	}

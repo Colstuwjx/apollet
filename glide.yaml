@@ -5,3 +5,4 @@ import:
   version: ~ v1.0.0
 - package: github.com/philchia/agollo
 - package: github.com/BurntSushi/toml
+- package: github.com/gin-gonic/gin

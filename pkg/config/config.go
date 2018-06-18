@@ -11,12 +11,17 @@ type Config struct {
 	Env     string
 	Cluster string
 
-	Http *HTTP
+	Http   *HTTP
+	Apollo *APOLLO
 }
 
 type HTTP struct {
 	Host string
 	Port int
+}
+
+type APOLLO struct {
+	Server string
 }
 
 func NewConf(confPath string) (*Config, error) {
