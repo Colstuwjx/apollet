@@ -16,8 +16,9 @@ type Config struct {
 }
 
 type HTTP struct {
-	Host string
-	Port int
+	Scheme string
+	Host   string
+	Port   int
 }
 
 type APOLLO struct {

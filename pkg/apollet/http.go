@@ -23,10 +23,23 @@ func (this *Agent) ServeHTTP() {
 		os.Exit(1)
 	}
 
-	bind := net.JoinHostPort(this.config.Http.Host, strconv.Itoa(this.config.Http.Port))
-	err := r.Run(bind)
-	if err != nil {
-		fmt.Println(err)
+	switch this.config.Http.Scheme {
+	case "http":
+		bind := net.JoinHostPort(this.config.Http.Host, strconv.Itoa(this.config.Http.Port))
+		err := r.Run(bind)
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(1)
+		}
+	case "unix":
+		bind := this.config.Http.Host
+		err := r.RunUnix(bind)
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(1)
+		}
+	default:
+		fmt.Println("Scheme ", this.config.Http.Scheme, " did not support yet.")
 		os.Exit(1)
 	}
 }
