@@ -6,3 +6,7 @@ type GetStringRequest struct {
 	Namespace string `form:"namespace" json:"namespace"`
 	Key       string `form:"key" json:"key"`
 }
+
+type GetStringResponse struct {
+	Data string `json:"data"`
+}

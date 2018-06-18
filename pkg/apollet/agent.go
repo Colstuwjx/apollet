@@ -6,13 +6,12 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/Colstuwjx/apollet/pkg/client"
 	"github.com/Colstuwjx/apollet/pkg/config"
 )
 
 type Agent struct {
 	config *config.Config
-	client *client.Client
+	client *Client
 }
 
 func NewAgent(conf *config.Config) *Agent {
@@ -21,7 +20,7 @@ func NewAgent(conf *config.Config) *Agent {
 	}
 
 	// Init the agollo clients
-	client := client.NewClient(
+	client := NewClient(
 		conf.Apollo.Server,
 	)
 

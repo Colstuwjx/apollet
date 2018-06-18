@@ -1,5 +1,5 @@
 package apollet
 
 const (
-	notFoundDefaultValue = ""
+	NotFoundDefaultValue = ""
 )

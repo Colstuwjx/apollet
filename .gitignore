@@ -5,6 +5,7 @@
 *.so
 *.dylib
 /apollet
+/apollctl
 /*.agollo
 
 # Test binary, build with `go test -c`

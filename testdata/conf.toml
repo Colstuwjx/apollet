@@ -5,11 +5,11 @@ env = "dev"
 cluster = "default"
 
 [http]
-    #scheme = "http"
-    #host = "127.0.0.1"
-    #port = 10810
-    scheme = "unix"
-    host = "/tmp/apollet.sock"
+    scheme = "http"
+    host = "127.0.0.1"
+    port = 10810
+    #scheme = "unix"
+    #host = "/tmp/apollet.sock"
 
 [apollo]
     server = "127.0.0.1:8080"

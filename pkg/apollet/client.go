@@ -1,4 +1,4 @@
-package client
+package apollet
 
 import (
 	"fmt"

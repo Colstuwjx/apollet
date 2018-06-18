@@ -15,7 +15,7 @@ func (this *Agent) ping(c *gin.Context) {
 func (this *Agent) getString(c *gin.Context) {
 	var gsr GetStringRequest
 
-	value := notFoundDefaultValue
+	value := NotFoundDefaultValue
 	err := c.Bind(&gsr)
 	if err != nil {
 		fmt.Println("Err: ", err)
@@ -23,8 +23,8 @@ func (this *Agent) getString(c *gin.Context) {
 		return
 	}
 
-	value = this.client.GetString(gsr.AppId, gsr.Cluster, gsr.Namespace, gsr.Key, notFoundDefaultValue)
-	if value == notFoundDefaultValue {
+	value = this.client.GetString(gsr.AppId, gsr.Cluster, gsr.Namespace, gsr.Key, NotFoundDefaultValue)
+	if value == NotFoundDefaultValue {
 		c.JSON(400, gin.H{"data": ""})
 		return
 	}
