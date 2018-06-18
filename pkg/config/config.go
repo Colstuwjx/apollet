@@ -10,6 +10,13 @@ type Config struct {
 	Debug   bool
 	Env     string
 	Cluster string
+
+	Http *HTTP
+}
+
+type HTTP struct {
+	Host string
+	Port int
 }
 
 func NewConf(confPath string) (*Config, error) {

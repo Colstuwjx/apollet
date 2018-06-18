@@ -1,5 +1,9 @@
 user = "root"
-pid = "/var/run/apollet.pid"
+pid = "/tmp/apollet.pid"
 debug = true
 env = "dev"
 cluster = "default"
+
+[http]
+    host = "127.0.0.1"
+    port = 10810

@@ -20,7 +20,8 @@ var (
 		Run: func(cmd *cobra.Command, args []string) {
 			conf, err := config.NewConf(cfgFile)
 			if err != nil {
-				panic(err)
+				fmt.Println(err)
+				os.Exit(1)
 			}
 
 			agent := apollet.NewAgent(conf)
